@@ -1,0 +1,383 @@
+	<html>
+	<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <!--<script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.6.14.min.js""></script>-->
+  <script src="https://npmcdn.com/parse/dist/parse.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.1/jspdf.debug.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+	<table id="first-team-results-table1">
+	<tbody>
+        </tbody>
+        </table>
+	<div id="DivIdToPrint">
+	<table id="first-team-results-table" class="table1" border="1xp" style="width:100%">
+        <tr>
+<td colspan="1">
+SCOUTS, GUIDES &#38; OUTDOOR LEISURE
+</td>
+<td>
+</td>
+<td>
+Statement
+</td>
+<td>
+</td>
+</tr>
+<!--Row 2-->
+<tr>
+<td>
+131 Bedford Street
+</td>
+<td rowspan="2">
+<img src="img/image003.png"/>
+</td>
+<td>
+Statement No.  
+</td>
+<td>
+<span id="output"></span> 
+</td>
+</tr>
+<!--Row 3-->
+<tr>
+<td>
+Crewe
+</td>
+<td colspan="1">
+</td>
+</tr>
+<!--Row 4-->
+<tr>
+<td>
+Cheshire CW2 6JB
+</td>
+<td colspan="1">
+</td>
+
+</tr>
+<!--Row 5-->
+<tr>
+<td colspan="5">
+</td>
+</tr>
+<tr>
+<td colspan="5">
+</td>
+</tr>
+<!--Row 6-->
+<tr>
+<td>
+Customer: The Treasurer <span id="groupName">No Name Found</span>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<!--Row 7-->
+<tr>
+<td>
+</td>
+<td colspan="0">
+</td>
+<td colspan="5">
+</td>
+</tr>
+<!--Row 8-->
+<tr>
+<td>
+Date
+</td>
+<td>
+Transaction
+</td>
+<td>
+Receipt No.
+</td>
+<td>
+Credits
+</td>
+<td>
+Debits
+</td>
+</tr>
+        <tbody>
+        </tbody>
+            <tr>
+                <!--Row 20-->
+                <tr><td colspan="3"></td><td>BALANCE DUE</td>
+                <td class="totalCol"><!--<input type="text" name="total1" id="total1" readonly/>--></td></tr>
+                <!--Row 21--><tr><td></td><td colspan="2">PAYMENT TO REACH US BY</td><td style="color:red"><b><span id="date555"></span><b></td><td style="color:red"><b><ins>latest please</ins><b></td></tr>
+                <!--Row 22--><tr><td></td><td colspan="2">Invoices and cash payments are included to:</td><td><span id="date556"></span></td><td colspan="3"></td></tr>
+                <!--Row 23--><tr><td></td><td colspan="3">Please make cheques payable to Scouts, Guides & Outdoor Leisure</td><td colspan="3"></td></tr>
+                <!--Row 24--><tr><td></td><td colspan="3">If you wish to make payment by bank transfer : Sort Code 16.26.14  A/C 11874581</td></tr>
+                <!--Row 25--><tr><td></td><td colspan="3">If paying by bank transfer please ensure group name is for reference</td></tr>
+                <!--Row 26--><tr><td colspan="4">SW Cheshire Scout District &#45; Scout Association Registration No. 010808 &#45; Registered Charity No. 506895 </td>
+            </tr>
+        
+    </table>
+    </div>
+    <input type='button' id='btn' value='Print' onclick='printDiv();'>
+	<script type="text/javascript">
+	var totals1;
+	var totals;
+	var total11 
+	     var arr = new Array();
+  var currDate  = new Date();
+  var currDay   = currDate.getDate();
+  var currMonth = currDate.getMonth() + 1;
+  var currYear  = currDate.getYear();
+
+  var ModMonth = currMonth + 1;
+  if (ModMonth > 12)
+   { 
+     ModMonth = 1;
+     currYear = currYear + 1;
+   }
+
+  ModDateStr = currDay + "/" + ModMonth + "/" + currYear;
+
+
+    document.getElementById("date555").innerText = ModDateStr;
+
+    
+    var person = prompt("Please enter a group number or name");
+
+    if (person == "1" || person == "1st") {
+     groupName =  "1st Alsager Scout Group";
+    } else if (person == "2" || person == "2nd") {
+     groupName =  "2nd Brereton Scout Group";
+    } else if (person == "5" || person == "5th") {
+     groupName =  "5th SWC Scout Group";
+    } else if (person == "7" || person == "7th") {
+     groupName =  "7th SWC Scout Group";
+    } else if (person == "9" || person == "9th") {
+     groupName =  "9th SWC Scout Group";
+    } else if (person == "10" || person == "10th") {
+     groupName =  "10th SWC Scout Group";
+    } else if (person == "12" || person == "12th") {
+     groupName =  "12th SWC Scout Group";
+    } else if (person == "14" || person == "14th") {
+     groupName =  "14th SWC Scout Group";
+    } else if (person == "16" || person == "16th") {
+     groupName =  "16th SWC Scout Group";
+    } else if (person == "23" || person == "23rd") {
+     groupName =  "23rd SWC Scout Group";
+    } else if (person == "25" || person == "25th") {
+     groupName =  "25th SWC Scout Group";
+    } else if (person == "26" || person == "26th") {
+     groupName =  "26th SWC Scout Group";
+    } else if (person == "28" || person == "28th") {
+     groupName =  "28th SWC Scout Group";
+    } else if (person == "35" || person == "35th") {
+     groupName =  "35th SWC Scout Group";
+    } else if (person == "38" || person == "38th") {
+     groupName =  "38th SWC Scout Group";
+    } else if (person == "40" || person == "40th") {
+     groupName =  "40th SWC Scout Group";
+    } else if (person == "wh" || person == "WH") {
+     groupName =  "Wilson House Scout Group";
+    } else if (person == "mall" || person == "mallory" || person == "Mallory" || person == "Mallory ESU") {
+     groupName =  "Mallory ESU Scout Group";
+    } else if (person == "SWC" || person == "swc") {
+     groupName =  "SWC District" 
+    } else if (person == "DEMO" || person == "demo") {
+     groupName =  "Demo" 
+    }
+    
+    document.getElementById("groupName").innerText = groupName;
+
+	 Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+	 
+	 var firstTeamResults1 = Parse.Object.extend("account");
+var query1 = new Parse.Query(firstTeamResults1);
+query1.equalTo("group", "14th SWC Scout Group");
+query1.notEqualTo("paid", true)
+query1.descending("updateAt");
+query1.find({success: function(results){  
+console.log("data found" + results)
+ 
+                for (var i = 0; i < results.length; i++) { 
+                var object = results[i];
+                var pairs = object.id;
+                    arr[i] = pairs;
+                }
+                console.log(arr);
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+    }
+});
+var firstTeamResults = Parse.Object.extend("account");
+console.log("account")
+var query = new Parse.Query(firstTeamResults);
+query.equalTo("group", groupName);
+query.notEqualTo("paid", true)
+console.log("running query")
+//"group" , group
+query.descending("updateAt");
+console.log("data found")
+query.find({success: function(results){  
+console.log(results)
+if (results == "") { (function($) {
+                $("#first-team-results-table").append("<tr><td class='ui-helper-center' colspan='5'>" 
+                    +"</td></tr>");
+            })(jQuery);
+       }else {     
+        for (var i = 0; i < results.length; i++) 
+        {
+        	var object = results[i];
+        	
+            (function($) {
+            
+                $("#first-team-results-table").append("<tr>" 
+                	+ "<td class'date'>"
+                    + object.get("date") 
+                    + "</td><td class='trans'>" 
+                    + object.get("trans")
+                    + "</td><td class='receiptnumber'>"
+                    + object.get("receiptnumber") 
+                    + "</td><td class='rowDataSd1'>" 
+                    + object.get("credit")
+                    + "</td><td class='rowDataSd'>" 
+                    + object.get("debits")
+                    +"</td></tr>");
+            })(jQuery);
+       }
+       addUP()
+       console.log("started function")
+    }
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+    }
+});
+function addUP () {
+console.log("running addup");
+totals = 0;
+totals1 = 0;
+var $dataRows=$("#first-team-results-table");
+
+            $dataRows.each(function() {
+                $(this).find('.rowDataSd').each(function(i){        
+                    totals +=parseInt( $(this).html());
+                });
+                $(this).find('.rowDataSd1').each(function(i){        
+                    totals1 +=parseInt( $(this).html());
+                });
+            });
+            $("#first-team-results-table td.totalCol").each(function(i){  
+                $(this).html(totals - totals1 + ".00");
+            });
+    console.log(totals);
+    console.log(totals1);
+    addNumber();
+
+}
+
+function addNumber () {
+console.log("running add number")
+var arr = []
+while(arr.length < 4){
+    var randomnumber = Math.ceil(Math.random()*9)
+    if(arr.indexOf(randomnumber) > -1) continue;
+    arr[arr.length] = randomnumber;
+}
+total11 = arr.join(""); 
+  console.log(total11);
+
+document.getElementById('output').innerHTML = total11;
+
+}
+
+function printDiv() 
+{
+var total = parseInt(totals) - parseInt(totals1) + ".00";
+//console.log("running cal" + total);
+//alert(total);
+//alert(groupName);
+//alert(arr);
+var TotalUpload = Parse.Object.extend("summary");
+var uploader = new TotalUpload();
+uploader.set("group", groupName);
+uploader.set("total", total);
+uploader.set("statementNumber", total11);
+uploader.set("invoice", arr);
+uploader.save(null, {
+  success: function(uploader) {
+    // Execute any logic that should take place after the object is saved.
+ 	print();
+  },
+  error: function(uploader, error) {
+    // Execute any logic that should take place if the save fails.
+    // error is a Parse.Error with an error code and message.
+    alert("Failed to create new object, with error code: " + error.message);
+  }
+})
+}
+function print() {
+var divToPrint=document.getElementById('DivIdToPrint');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);
+ /*var pdf = new jsPDF('p', 'pt', 'letter');
+    // source can be HTML-formatted string, or a reference
+    // to an actual DOM element from which the text will be scraped.
+    source = $('#DivIdToPrint')[0];
+
+    // we support special element handlers. Register them with jQuery-style 
+    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+    // There is no support for any other type of selectors 
+    // (class, of compound) at this time.
+    specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function (element, renderer) {
+            // true = "handled elsewhere, bypass text extraction"
+            return true
+        }
+    };
+    margins = {
+        top: 80,
+        bottom: 60,
+        left: 40,
+        width: 522
+    };
+    // all coords and widths are in jsPDF instance's declared units
+    // 'inches' in this case
+    pdf.fromHTML(
+    source, // HTML string or DOM elem ref.
+    margins.left, // x coord
+    margins.top, { // y coord
+        'width': margins.width, // max width of content on PDF
+        'elementHandlers': specialElementHandlers
+    },
+
+       function (dispose) {
+    // dispose: object with X, Y of the last line add to the PDF 
+    //          this allow the insertion of new lines after html
+    pdf.save('Test.pdf');
+}, margins);*/
+
+}
+/*var divToPrint=document.getElementById('DivIdToPrint');
+
+  var newWin=window.open('','Print-Window');
+
+  newWin.document.open();
+
+  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+  newWin.document.close();
+
+  setTimeout(function(){newWin.close();},10);*/
+</script>
+</body>
+</html>

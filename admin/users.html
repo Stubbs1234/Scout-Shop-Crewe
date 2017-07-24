@@ -1,0 +1,126 @@
+<html>
+<head>
+           <meta name="viewport" content="width device-width, initial-scale = 1">
+  <meta charset="utf-8">
+
+  <title>Scout Shop Users</title>
+    <link rel="stylesheet" href="box.css">
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://npmcdn.com/parse/dist/parse.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    </head>
+<body>
+     <div id="container">
+<div class="page-header">
+<h1>Scout Shop Crewe</h1>
+    <h2>Users</h2>
+    <div class="btn-toolbar">
+    <a href="signUp.html" class="btn btn-info pull-right"/>New User</a>
+         <a href="../main.html" class="btn btn-warning pull-right"/>Home</a>
+         </di>
+    </div>
+    <div class="jumbotron">
+    	<table id="first-team-results-table" class="table table-striped" border="1xp" style="width:100%">
+         <col width="100">
+        <col width="100">
+        <col width="100">
+            <col width="100">
+            <tr>
+<th><input type="checkbox" class="chkSelectAll"/></th>
+<th>User ID</th>
+<th>Firstname</th>
+<th>Email Address</th>
+<th>Admin Level</th>
+</tr>        
+    </table>
+    <script type="text/javascript">
+ Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com'
+	
+var firstTeamResults = Parse.Object.extend("_User");
+var query = new Parse.Query(firstTeamResults);
+query.find({success: function(results){   
+        for (var i = 0; i < results.length; i++) 
+        {
+            var object = results[i];
+               
+            (function($) {
+                $("#first-team-results-table").append("<tr><td>" 
+                	+ "<input type='checkbox' class='chkNumber' value='"+object.id+"'/>"
+                	+ "</td><td>"
+                    + object.get("username")
+                    + "</td><td>" 
+                    + object.get("firstname")
+                    + "</td><td>"
+                    + object.get("email")
+                    + "</td><td>"
+                    + object.get("admin")
+                    + "</td></tr>");
+            })(jQuery);
+       }
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);}
+});
+     </script>
+<br><div id="buttonShow"> 
+    <input type="button" class="btn btn-danger btn-lg" value="More"/>
+    </div>
+    <div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<p>Please select an option</p>
+		<input type="radio" name="share" value="uu">Update User<br>
+        <input type="radio" name="share" value="delete">Delete User<br>
+		<input type="submit" id="go" value="Go"/>
+	</div>
+    <script type="text/javascript">    
+var OBJECT = "";
+      $('.btnGetAll').click(function () {
+        if ($('.chkNumber:checked').length) {
+          var chkId = '';
+          $('.chkNumber:checked').each(function () {
+            chkId += $(this).val() + ",";
+          });
+          chkId = chkId.slice(0, -1);
+          OBJECT = chkId
+          window.location="#openModal";
+        }
+        else {
+          alert('Nothing Selected');
+        }
+      });
+
+      $('.chkSelectAll').click(function () {
+        $('.chkNumber').prop('checked', $(this).is(':checked'));
+      });
+
+      $('.chkNumber').click(function () {
+        if ($('.chkNumber:checked').length == $('.chkNumber').length) {
+          $('.chkSelectAll').prop('checked', true);
+        }
+        else {
+          $('.chkSelectAll').prop('checked', false);
+        }
+      });
+      $('#go').click(function () { 
+      var selectedVal = "";
+var selected = $("input[type='radio'][name='share']:checked");
+if (selected.length > 0) {
+    selectedVal = selected.val();
+}
+if (selectedVal == "uu") {
+ 
+} 
+ else if (selectedVal == "delete") {
+      }
+      });
+</script>
+    </div>
+     </div>
+    </div>
+    </div>
+    </body>
+</html>

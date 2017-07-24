@@ -1,0 +1,172 @@
+<html>
+<head>
+    <meta name="viewport" content="width device-width, initial-scale = 1">
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script	src="https://npmcdn.com/parse/dist/parse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/signature_pad/1.5.3/signature_pad.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <!-- <link rel="stylesheet" href="style.css">-->
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <script src="products.js" type="text/javascript"></script>
+    <script src="add.js" type="text/javascript"></script>
+    </head>
+<body>
+    <div class="container">
+        <div class="page-header">
+        <h1>New Invoice</h1>
+        </div>
+        <div class="jumbotron">
+<form role="form" class="form-inline">
+    <div class="form-group">
+        <label>Product</label>
+        <select class="form-control" id="select">
+        </select> &nbsp;
+        <label>Quantity</label>
+        <input type="text" id="q" name="q" class="form-control" size="3"/> &nbsp;
+        X &nbsp; <label>Price</label>
+        <input type="text" id="price" name="price" size="6" class="form-control" onblur="add1()"/> &nbsp;
+        = &nbsp; <label>Total</label>
+        <input type="text" id="total" name="total" size="6" class="form-control" readonly/>
+    </div><br><br>
+     <div class="form-group">
+         <label>Product</label>
+         <select class="form-control" id="select">
+         </select> &nbsp;
+         <label>Quantity</label>
+         <input type="text" id="q" name="q" class="form-control" size="3"/> &nbsp;
+        X &nbsp; <label>Price</label>
+        <input type="text" id="price" name="price" size="6" class="form-control" onblur="add2()"/> &nbsp;
+        = &nbsp; <label>Total</label>
+         <input type="text" id="total" name="total" size="6" class="form-control" readonly/>
+    </div><br><br>
+         <div class="form-group">
+             <label>Product</label>
+             <select class="form-control" id="select">
+             </select> &nbsp;
+             <label>Quantity</label>
+             <input type="text" id="q" name="q" class="form-control" size="3"/>  &nbsp;
+        X &nbsp; <label>Price</label>
+        <input type="text" id="price" name="price" size="6" class="form-control" onblur="add3()"/> &nbsp;
+        = &nbsp; <label>Total</label>
+             <input type="text" id="total" name="total" size="6" class="form-control" readonly/>
+    </div><br><br>
+             <div class="form-group">
+                 <label>Product</label>
+                 <select class="form-control" id="select">
+                 </select> &nbsp;
+                 <label>Quantity</label>
+                 <input type="text" id="q" name="q" class="form-control" size="3"/> &nbsp;
+        X &nbsp; <label>Price</label>
+        <input type="text" id="price" name="price" size="6" class="form-control" onblur="add4()"/> &nbsp;
+        = &nbsp; <label>Total</label>
+                 <input type="text" id="total" name="total" size="6" class="form-control" readonly/>
+    </div><br><br>
+                 <div class="form-group">
+                     <label>Product</label>
+                     <select class="form-control" id="select">
+                     </select> &nbsp;
+                     <label>Quantity</label>
+                     <input type="text" id="q" name="q" class="form-control" size="3"/> &nbsp;
+        X &nbsp; <label>Price</label>
+        <input type="text" id="price" name="price" size="6" class="form-control" onblur="add5()"/> &nbsp;
+        = &nbsp; <label>Total</label>
+                     <input type="text" id="total" name="total" size="6" class="form-control" readonly/>
+    </div><br><br>
+                    <!--<div id="container" class="form-group"/>-->
+                    <iframe src="moreTextField1.html" frameborder="0" scrolling="no" width="100%" height="100%"></iframe>
+                <br><br>
+    <div class="form-group">
+    <label>Total</label> &nbsp; = &nbsp; <input id="endTotal" type="text" class="form-control" readonly/>
+    </div><br><br>
+<input type="reset" value="Reset" class="btn btn-danger"/>
+            </form>
+        <input id="signButton" type="submit" value="Add" class="btn btn-primary"/>
+            <input id="addTextFields" type="submit" value="Add More Rows" class="btn btn-primary"/>
+        </div>
+        </div>
+  <script type="text/javascript">
+var option = '';
+for (var i=0;i<products.length;i++){
+   option += '<option value="'+ products[i] + '">' + products[i] + '</option>';
+}
+$('#select').append(option);
+      var tot = 0;
+
+      
+              
+$('#addTextFields').click(function () {
+    //Create an input type dynamically.   
+            //var number = document.getElementById("member").value;
+            var container = document.getElementById("container");
+            while (container.hasChildNodes()) {
+                container.removeChild(container.lastChild);
+            }
+            for (i=0;i<5;i++){
+                var q = document.createElement("input");
+                q.type = "text";
+                q.name = "q";
+                q.id = "q";
+                q.class="form-control" 
+                q.size="3"
+                container.appendChild(q);
+                container.createElement("br")
+                
+            }for (i=0;i<5;i++){
+                var price = document.createElement("input");
+                price.type = "text";
+                price.name = "price";
+                price.id = "price";
+                price.class="form-control" 
+                price.size="3"
+                container.appendChild(price);
+            }
+});
+var qan = new Array();
+var product = new Array();
+var price = new Array();
+var total = new Array();
+  //Submit button takes you to the sign page and uploads the data on that page
+	$('#signButton').click(function () {
+        
+        for (var i= 0; i < 20; i++) {
+        qan.push(document.getElementsByName("q")[i].value);         
+        }
+        for (var i= 0; i < 20; i++) {
+        product.push(document.getElementsByName("q")[i].value);         
+        }
+        for (var i= 0; i < 20; i++) {
+        price.push(document.getElementsByName("q")[i].value);         
+        }
+        for (var i= 0; i < 20; i++) {
+        total.push(document.getElementsByName("q")[i].value);         
+        }
+        
+        if (tot < 5) {
+            alert("5.00 Limit");
+        } else {
+         var receiptNumber = prompt("Please receipt number");
+         if (receiptNumber == "") {
+            alert("Please enter a receipt number");
+        } else { totalF()} }
+            
+            function totalF() {
+            if (confirm("Is this the right total? \u00A3" + tot.toFixed(2)) == true) {
+    fin();
+} else {
+    alert("Please enter the right total");
+}
+        } });
+     function fin() { 
+        
+    sessionStorage.setItem('quntity', JSON.stringify(qan));
+        sessionStorage.setItem('product', JSON.stringify(product));
+          sessionStorage.setItem('price', JSON.stringify(price));
+            sessionStorage.setItem('total', JSON.stringify(total));
+        sessionStorage.setItem('Mtotal', tot);
+        
+    window.location.href = "sign.html";
+        }
+				</script>
+ </body>
+ </html>

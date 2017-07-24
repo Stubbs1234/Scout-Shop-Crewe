@@ -1,0 +1,400 @@
+	<html>
+	<head>
+        <meta charset="utf-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<script src="http://npmcdn.com/parse/dist/parse.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body onload="noURL()">
+        <div id="name">
+	<table id="first-team-results-table1">
+	<tbody>
+        </tbody>
+        </table>
+        </div>
+        <div class="btn-toolbar">
+         <a href="../main.html" class="btn btn-warning pull-right"/>Home</a>
+         </div>
+	<div id="DivIdToPrint">
+        <div id="docx">
+  <div class="WordSection1">
+	<table id="first-team-results-table" class="table1" border="1xp" style="width:100%">
+        <tr>
+<td colspan="1">
+SCOUTS, GUIDES &#38; OUTDOOR LEISURE
+</td>
+<td>
+</td>
+<td>
+Statement
+</td>
+
+<td>
+</td>
+
+</tr>
+<!--Row 2-->
+<tr>
+<td>
+131 Bedford Street
+</td>
+<td rowspan="2">
+<img src="img/image003.png"/>
+</td>
+<td>
+Statement No.  
+</td>
+<td>
+<span id="output"></span> 
+</td>
+</tr>
+<!--Row 3-->
+<tr>
+<td>
+Crewe
+</td>
+<td colspan="1">
+</td>
+</tr>
+<!--Row 4-->
+<tr>
+<td>
+Cheshire CW2 6JB
+</td>
+<td colspan="1">
+</td>
+
+</tr>
+<!--Row 5-->
+<tr>
+<td colspan="5">
+    <hr colspan="s">
+</td>
+</tr>
+<!--Row 6-->
+<tr>
+<td>
+Customer: The Treasurer <span id="groupName">No Name Found</span>
+</td>
+<td colspan="5">
+</td>
+</tr>
+<!--Row 7-->
+<tr>
+<td>
+</td>
+<td colspan="0">
+</td>
+<td colspan="5">
+</td>
+</tr>
+<!--Row 8-->
+<tr>
+<td>
+Date
+</td>
+<td>
+Transaction
+</td>
+<td>
+Receipt No.
+</td>
+<td>
+Credits
+</td>
+<td>
+Debits
+</td>
+</tr>
+        <tr><td colspan="5"><hr noshade></td></tr>
+        <tbody>
+        </tbody>
+            <tr>
+                <!--Row 20-->
+                <tr><td colspan="3"></td><td>BALANCE DUE</td>
+                <td class="totalCol"><!--<input type="text" name="total1" id="total1" readonly/>--></td></tr>
+                <!--Row 21--><tr><td></td><td colspan="2">PAYMENT TO REACH US BY</td><td style="color:red"><b><span id="date555"></span><b></td><td style="color:red"><b><ins>latest please</ins><b></td></tr>
+                <!--Row 22--><tr><td></td><td colspan="2">Invoices and cash payments are included to:</td><td><span id="date556"></span></td><td colspan="3"></td></tr>
+                <!--Row 23--><tr><td></td><td colspan="3">Please make cheques payable to Scouts, Guides & Outdoor Leisure</td><td colspan="3"></td></tr>
+                <!--Row 24--><tr><td></td><td colspan="3">If you wish to make payment by bank transfer : Sort Code 16.26.14  A/C 11874581</td><td></td></tr>
+                <!--Row 25--><tr><td></td><td colspan="3">If paying by bank transfer please ensure group name is for reference</td><td></td></tr>
+                <!--Row 26--><tr><td colspan="4">SW Cheshire Scout District &#45; Scout Association Registration No. 010808 &#45; Registered Charity No. 506895 </td><td></td>
+            </tr>
+        
+    </table>
+    </div>
+        </div>
+            </div>
+        <input type='button' id='btn' value='Download' onclick='pdf();'><input type="button" id="btn" value="Print" onclick="print();"><input type="button" id="btn" value="Delete" onclick="deleteObj();">
+        <div id="">
+            <table border="1px" width="100%">
+            <tr>
+                <td>
+                    <p>Testing</p>
+                </td>
+                </tr>
+            </table>
+        </div>
+	<script type="text/javascript">
+        Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+    var groupName;
+        //save the total and upload as a new account ready for noURL,
+	var totals1;
+	var totals;
+	var total11 
+    var testTotal;
+        var outputFile;
+	     var arr = new Array();
+    var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+2; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = dd+'/'+mm+'/'+yyyy;
+
+    document.getElementById("date555").innerText = today;
+        console.log(today);
+
+   function noURL() { 
+       console.log("top works");
+       
+    var person = prompt("Please enter a group number or name");
+
+    if (person == "1A" || person == "1stA") {
+     groupName =  "1st Alsager Scout Group";
+    } if (person == "1" || person == "1st") {
+     groupName =  "1st SWC Scout Group";
+    }else if (person == "2" || person == "2nd") {
+     groupName =  "2nd Brereton Scout Group";
+    } else if (person == "5" || person == "5th") {
+     groupName =  "5th SWC Scout Group";
+    } else if (person == "7" || person == "7th") {
+     groupName =  "7th SWC Scout Group";
+    } else if (person == "9" || person == "9th") {
+     groupName =  "9th SWC Scout Group";
+    } else if (person == "10" || person == "10th") {
+     groupName =  "10th SWC Scout Group";
+    } else if (person == "12" || person == "12th") {
+     groupName =  "12th SWC Scout Group";
+    } else if (person == "14" || person == "14th") {
+     groupName =  "14th SWC Scout Group";
+    } else if (person == "16" || person == "16th") {
+     groupName =  "16th SWC Scout Group";
+    } else if (person == "23" || person == "23rd") {
+     groupName =  "23rd SWC Scout Group";
+    } else if (person == "25" || person == "25th") {
+     groupName =  "25th SWC Scout Group";
+    } else if (person == "26" || person == "26th") {
+     groupName =  "26th SWC Scout Group";
+    } else if (person == "28" || person == "28th") {
+     groupName =  "28th SWC Scout Group";
+    } else if (person == "35" || person == "35th") {
+     groupName =  "35th SWC Scout Group";
+    } else if (person == "38" || person == "38th") {
+     groupName =  "38th SWC Scout Group";
+    } else if (person == "40" || person == "40th") {
+     groupName =  "40th SWC Scout Group";
+    } else if (person == "wh" || person == "WH") {
+     groupName =  "Wilson House Scout Group";
+    } else if (person == "mall" || person == "mallory" || person == "Mallory" || person == "Mallory ESU") {
+     groupName =  "Mallory ESU Scout Group";
+    } else if (person == "SWC" || person == "swc") {
+     groupName =  "SWC District" 
+    } else if (person == "DEMO" || person == "demo") {
+     groupName =  "Demo" 
+    }
+    document.getElementById("groupName").innerText = groupName;
+       normal();
+   } 
+   
+   function normal() {  
+        console.log("running");
+var firstTeamResults = Parse.Object.extend("account");
+var query = new Parse.Query(firstTeamResults);
+query.equalTo("group", groupName);
+query.notEqualTo("paid", true)
+query.descending("updateAt");
+query.find({success: function(results){  
+if (results == "") { (function($) {
+                $("#first-team-results-table").append("<tr><td class='ui-helper-center' colspan='5'>" 
+                    +"</td></tr>");
+            })(jQuery);
+       }else {     
+        for (var i = 0; i < results.length; i++) 
+        {
+        	var object = results[i];
+            
+        	
+            (function($) {
+            
+                $("#first-team-results-table").append("<tr>" 
+                	+ "<td class'date'>"
+                    + object.get("date") 
+                    + "</td><td class='trans'>" 
+                    + object.get("trans")
+                    + "</td><td class='receiptnumber'>"
+                    + object.get("receiptnumber") 
+                    + "</td><td class='rowDataSd1'>" 
+                    + object.get("credit")
+                    + "</td><td class='rowDataSd'>" 
+                    + object.get("debits")
+                    +"</td></tr>");
+            })(jQuery);
+       }
+       addUP()
+    }
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+    }
+});
+   }
+function addUP () {
+totals = 0;
+totals1 = 0;
+var $dataRows=$("#first-team-results-table");
+
+            $dataRows.each(function() {
+                $(this).find('.rowDataSd').each(function(i){        
+                    totals += parseFloat($(this).html());
+                });
+                $(this).find('.rowDataSd1').each(function(i){        
+                    totals1 += parseFloat($(this).html());
+                });
+            });
+         testTotal = totals - totals1;
+            $("#first-team-results-table td.totalCol").each(function(i){  
+                $(this).html(testTotal);
+            });
+    addNumber();
+
+}
+
+function addNumber () {
+var arr = []
+while(arr.length < 4){
+    var randomnumber = Math.ceil(Math.random()*9)
+    if(arr.indexOf(randomnumber) > -1) continue;
+    arr[arr.length] = randomnumber;
+}
+total11 = arr.join(""); 
+
+document.getElementById('output').innerHTML = total11;
+
+}
+        
+function pdf() {
+    var finalUploadTotal = testTotal.toString();
+    var finalUpload = Parse.Object.extend("summary");
+var final = new finalUpload();
+final.set("total", finalUploadTotal);
+final.set("group", groupName);
+final.set("statementNumber", total11);
+final.set("paid", false);
+final.save(null, {
+  success: function(signUpload) {
+      download();
+  }
+});}
+    function download() {
+  var fileName = groupName+".doc";
+  console.log(fileName);
+    
+   if (!window.Blob) {
+      alert('Your legacy browser does not support this action.');
+      return;
+   }
+
+   var html, link, blob, url, css;
+   
+   // EU A4 use: size: 841.95pt 595.35pt;
+   // US Letter use: size:11.0in 8.5in;
+   
+   css = (
+     '<style>' +
+     '@page WordSection1{size: 841.95pt 595.35pt;mso-page-orientation: landscape;}' +
+     'div.WordSection1 {page: WordSection1;}' +
+     'table{width: 100px}td{border:1px gray solid;padding:2px;}'+
+     '</style>'
+   );
+   
+   html = window.docx.innerHTML;
+   blob = new Blob(['\ufeff', css + html], {
+     type: 'application/msword'
+   });
+   url = URL.createObjectURL(blob);
+   link = document.createElement('A');
+   link.href = url;
+   console.log(url);
+   //document.write(url);
+   //document.write(link);
+   // Set default file name. 
+   // Word will append file extension - do not add an extension here.
+   link.download = groupName;   
+   document.body.appendChild(link);
+   if (navigator.msSaveOrOpenBlob ) navigator.msSaveOrOpenBlob( blob, fileName); // IE10-11
+   		else link.click();  // other browsers
+   document.body.removeChild(link);
+}
+        
+function printDiv() {
+    console.log("running print");
+     var content = document.getElementById("DivIdToPrint").innerHTML;
+    var mywindow = window.open('', 'Print', 'height=600,width=800');
+    console.log("running the next bit");
+    mywindow.document.write('<html><head><title>Print</title>');
+    mywindow.document.write('</head><body>');
+    mywindow.document.write(content);
+    mywindow.document.write('</body></html>');
+    console.log("got the documents");
+    mywindow.document.close();
+    mywindow.focus();
+    mywindow.print();
+    mywindow.close();
+    return true;
+    console.log("ready to run the save");
+}
+        function deleteObj() {
+            var query = new Parse.Query("account");
+
+query.equalTo("group", groupName);
+
+query.find({
+    success: function(result) {
+        for(var i=0; i<result.length; i++) {
+            result[i].destroy({
+                success: function(object) {
+                    status.success("Delete job completed");
+                    console.log('Delete Successful');
+                },
+                error: function(object, error) {
+                    status.error("Delete error :" + error);
+                    console.log('Delete failed');
+                }
+            });
+        }
+        status.success("Delete job completed");
+    },
+    error: function(error) {
+        status.error("Error in delete query error: " + error);
+        alert('Error in delete query');
+    }   
+        });
+           window.location.href = "monthlyStatement.html";
+           }
+
+</script>
+</body>
+</html>

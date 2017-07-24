@@ -1,0 +1,170 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.3/jspdf.debug.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="DivIdToPrint">
+	<table id="first-team-results-table" class="table1" border="1xp" style="width:100%">
+        <tr>
+<td >
+SCOUTS, GUIDES &#38; OUTDOOR LEISURE
+</td>
+<td>
+</td>
+<td>
+Statement
+</td>
+
+<td>
+</td>
+
+</tr>
+<!--Row 2-->
+<tr>
+<td>
+131 Bedford Street
+</td>
+<td >
+<img src="img/image003.png"/>
+</td>
+<td>
+Statement No.  
+</td>
+<td>
+<span id="output"></span> 
+</td>
+</tr>
+<!--Row 3-->
+<tr>
+<td>
+Crewe
+</td>
+<td >
+</td>
+</tr>
+<!--Row 4-->
+<tr>
+<td>
+Cheshire CW2 6JB
+</td>
+<td >
+</td>
+
+</tr>
+<!--Row 5-->
+<tr>
+<td >
+</td>
+</tr>
+<tr>
+<td >
+</td>
+</tr>
+<!--Row 6-->
+<tr>
+<td>
+Customer: The Treasurer <span id="groupName">No Name Found</span>
+</td>
+<td >
+</td>
+</tr>
+<!--Row 7-->
+<tr>
+<td>
+</td>
+<td >
+</td>
+<td >
+</td>
+</tr>
+<!--Row 8-->
+<tr>
+<td>
+Date
+</td>
+<td>
+Transaction
+</td>
+<td>
+Receipt No.
+</td>
+<td>
+Credits
+</td>
+<td>
+Debits
+</td>
+</tr>
+        <tr><td ><hr noshade></td></tr>
+        <tbody>
+        </tbody>
+            <tr>
+                <!--Row 20-->
+                <tr><td ></td><td>BALANCE DUE</td>
+                <td class="totalCol"><!--<input type="text" name="total1" id="total1" readonly/>--></td></tr>
+                <!--Row 21--><tr><td></td><td >PAYMENT TO REACH US BY</td><td style="color:red"><b><span id="date555"></span><b></td><td style="color:red"><b><ins>latest please</ins><b></td></tr>
+                <!--Row 22--><tr><td></td><td >Invoices and cash payments are included to:</td><td><span id="date556"></span></td><td ></td></tr>
+                <!--Row 23--><tr><td></td><td >Please make cheques payable to Scouts, Guides & Outdoor Leisure</td><td ></td></tr>
+                <!--Row 24--><tr><td></td><td >If you wish to make payment by bank transfer : Sort Code 16.26.14  A/C 11874581</td></tr>
+                <!--Row 25--><tr><td></td><td >If paying by bank transfer please ensure group name is for reference</td></tr>
+                <!--Row 26--><tr><td >SW Cheshire Scout District &#45; Scout Association Registration No. 010808 &#45; Registered Charity No. 506895 </td>
+            </tr>
+        
+    </table>
+    </div>
+        <input type='button' id='btn' value='Print' onclick='pdf();'>
+        <script type="text/javascript">
+        function pdf() {
+            var doc =new jsPDF()
+            doc.text('Hello World', 10, 10)
+            doc.save('a4.pdf')
+            var doc = new jsPDF({
+                orientation: 'landspcape',
+                unit: 'in',
+                format: [4,2]
+            })
+    console.log("running pdf");
+            /*
+    var pdf = new jsPDF('p', 'pt', 'letter');
+    // source can be HTML-formatted string, or a reference
+    // to an actual DOM element from which the text will be scraped.
+    source = $('#DivIdToPrint')[0];
+
+    // we support special element handlers. Register them with jQuery-style 
+    // ID selector for either ID or node name. ("#iAmID", "div", "span" etc.)
+    // There is no support for any other type of selectors 
+    // (class, of compound) at this time.
+    specialElementHandlers = {
+        // element with id of "bypass" - jQuery style selector
+        '#bypassme': function (element, renderer) {
+            // true = "handled elsewhere, bypass text extraction"
+            return true
+        }
+    };
+    margins = {
+        top: 4,
+        bottom: 4,
+        left: 4,
+        width: 522
+    };
+    // all coords and widths are in jsPDF instance's declared units
+    // 'inches' in this case
+    pdf.fromHTML(
+    source, // HTML string or DOM elem ref.
+    margins.left, // x coord
+    margins.top, { // y coord
+        'width': margins.width, // max width of content on PDF
+        'elementHandlers': specialElementHandlers
+    },
+
+    function (dispose) {
+        // dispose: object with X, Y of the last line add to the PDF 
+        //          this allow the insertion of new lines after html
+        pdf.save('Test.pdf');
+    }, margins);
+    */
+}//}
+        </script>
+        </body>
+        </html>

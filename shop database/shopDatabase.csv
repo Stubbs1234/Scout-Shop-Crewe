@@ -1,0 +1,21 @@
+item_id,item_name,item_png,item_price,section,category
+0,Scout Shirt,img/scoutshirt.jpg,17,scouts,uniform
+1,Scout Belt,img/scoutbelt.jpg,13,scouts,uniform
+2,Beavers Polo Shirt,img/beaverShirt.jpg,11.5,beavers,uniform
+3,Beavers Sweatshirt,img/beaverSweatshirt.jpg,13,beavers,uniform
+4,Cubs Polo Shirt,img/cubShirt.jpg,12.5,cubs,uniform
+5,Cubs Sweatshirt,img/cubSweatshirt.jpg,13.5,cubs,uniform
+6,Explorer S/S Shirt,img/explorerssShirt.jpg,21,explorer,uniform
+7,Explorer L/S Shirt,img/explorerlsShirt.jpg,22,explorer,uniform
+8,Explorer Polo Shirt,img/explorerShirt.jpg,16,explorer,uniform
+9,Adult Polo Shirt,img/adultPoloShirt,16,adults,uniform
+10,Adult Mens S/S Shirt,img/adultShirt,21,adults,uniform
+11,Adult Mens L/S Shirt,img/adultLongShirt.jpg,22,adults,uniform
+12,Youth's Scout Activity Trousers,img/youthBottoms.jpg,16,scouts,uniform
+13,Youth's Scout Unisex Activity Shorts,img/youthShorts.jpg,15.5,scouts,uniform
+14,Youth's Scout Activity Trousers,img/youthBottoms.jpg,16,beavers,uniform
+15,Youth's Scout Unisex Activity Shorts,img/youthShorts.jpg,15.5,beavers,uniform
+16,Youth's Scout Activity Trousers,img/youthBottoms.jpg,16,cubs,uniform
+17,Youth's Scout Unisex Activity Shorts,img/youthShorts.jpg,15.5,cubs,uniform
+18,Men's Scout Activity Trousers,img/mensactivitybottoms.jpg,27,adults,uniform
+19,Men's Scout Activity Shorts,img/mensShorts,22,adults,uniform

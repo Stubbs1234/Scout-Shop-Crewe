@@ -1,0 +1,82 @@
+<html>
+<head>
+           <meta name="viewport" content="width device-width, initial-scale = 1">
+  <meta charset="utf-8">
+
+  <title>Scout Shop Edit Profile</title>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://npmcdn.com/parse/dist/parse.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    </head>
+<body>
+     <div id="container">
+<div class="page-header">
+<h1>Scout Shop Crewe</h1>
+    <h2>Edit Your Profile</h2>
+    <div class="btn-toolbar">
+         <a href="../main.html" class="btn btn-warning pull-right"/>Home</a>
+         </div>
+    </div>
+    <div class="jumbotron">
+    <script type="text/javascript">
+Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+var adminEnd;
+var fname = Parse.User.current().get("firstname");
+var username = Parse.User.current().get("username");
+var email = Parse.User.current().get("email");
+var admin = Parse.User.current().get("admin");
+        if (admin == 0) {
+            adminEnd = "Staff Level";
+        } else if (admin == 1) {
+            adminEnd = "Banking Level";
+        } else if (admin == 2) {
+            adminEnd = "Admin Level";
+        }
+document.addEventListener("DOMContentLoaded", function(event) {
+    document.getElementById("fname").value = fname;
+    document.getElementById("username").value = username;
+    document.getElementById("email").value = email;
+    document.getElementById("admin").value = adminEnd;
+});
+</script>
+<div id="uploadForm">
+<form name=signUpForm role="form">
+<input type=text id="fname" class="form-control" readonly/>
+<input type=text id="username" class="form-control" readonly/>
+<input type=text id="email" class="form-control"/>
+<input type=text id="admin" class="form-control" readonly/>
+</form>
+</div><br>
+<input id="update" type="submit" value="Update Your Details" class="btn btn-success"/>
+        <a href="password.html" class="btn btn-danger">Change your Password</a>
+<script type="text/javascript">
+  Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+$("#update").click(function () {
+event.preventDefault();
+var delObject = Parse.User.current().id;
+var email = signUpForm.email.value;
+
+var GameScore = Parse.Object.extend("_User");
+var query = new Parse.Query(GameScore);
+query.get(delObject, {
+  success: function(results) {
+results.set("email", email);
+results.save();
+alert("Saved!");
+    
+  },
+  error: function(error) {
+    console.log(error);
+  }
+});
+})
+
+</script>
+         </div>
+    </div>
+    </body>
+</html>

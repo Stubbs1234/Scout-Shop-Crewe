@@ -1,0 +1,32 @@
+#example-print {
+       display: none;
+    }
+@media print {
+    #main {
+       display: none;
+    }
+    #example-print {
+       display: block;
+    }
+    
+    .name {
+    display: block;
+    }
+    .des {
+    display: block;
+    }
+    .web {
+    display: block;
+    }
+    .item {
+    display: block;
+    }
+    
+    html, body {
+            width: 80mm;
+            height: 80mm;        
+        }
+    .m-signature-pad {
+    display: none;
+    }
+}

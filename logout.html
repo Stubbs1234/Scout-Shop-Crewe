@@ -1,0 +1,35 @@
+<html>
+<head>
+       <meta name="viewport" content="width device-width, initial-scale = 1">
+  <meta charset="utf-8">
+
+  <title>Scout Shop Logout</title>
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="http://npmcdn.com/parse/dist/parse.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+</head>
+    <body onload="logoutUserOnLoad()">
+         <div id="container">
+        <div class="jumbotron">
+            <div id="out" style="display:none;"><p class="bg-success">You're now logout</p> </br>
+            <a href='index.html' class='btn btn-success'>Home Page</a>
+            </div>
+    <script type="text/javascript">
+        function logoutUserOnLoad() {
+        Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+        Parse.User.logOut().then(() => {
+  var currentUser = Parse.User.current();  
+if (currentUser == null) {
+    document.getElementById('out').style.display = 'block';
+    console.log("Logout");
+}
+        });
+        }
+        </script>
+             </div>
+        </div>
+    </body>
+</html>

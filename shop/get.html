@@ -1,0 +1,46 @@
+<html>
+<head>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="http://npmcdn.com/parse/dist/parse.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+    var items = new Array();
+            Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com';
+    var firstTeamResults = Parse.Object.extend("orderC");
+var query = new Parse.Query(firstTeamResults);
+query.equalTo("objectId", "bMo3mm6Nai");
+    query.find({
+        success: function(results) {
+        console.log("Successfully retrieved " + results.length + " item");
+         console.log(results)
+            //Assume one result
+           
+            var object = results[0];
+            items = object.get("items");
+            console.log(items);
+            console.log(items[0]);
+            
+           /* var jsonData = JSON.parse(results);
+for (var i = 0; i < jsonData.items.length; i++) {
+    var item = jsonData.items[i];
+    console.log(item.name);
+}
+            
+            
+                var object = results[0];
+                var pairs = object.get("items");
+            console.log(object.get("items"));
+          console.log(pairs[0]);
+                var arr = new Array();
+                for (var i = 0; i < pairs.length; i++) {
+                    console.log("loop");
+                    arr[0] = pairs[i].name;
+                console.log(arr[i]);
+                }*/
+} });
+
+</script>
+</body>
+</html>

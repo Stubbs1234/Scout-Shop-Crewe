@@ -1,0 +1,66 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "88bd8747c5a6e72464dfbba082e38d7e",
+    "packages": [
+        {
+            "name": "parse/php-sdk",
+            "version": "1.2.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/parse-community/parse-php-sdk.git",
+                "reference": "814a48ca6b2336cb85a915dd29e76c2b135f9d54"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/parse-community/parse-php-sdk/zipball/814a48ca6b2336cb85a915dd29e76c2b135f9d54",
+                "reference": "814a48ca6b2336cb85a915dd29e76c2b135f9d54",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "phpdocumentor/phpdocumentor": "~2.5",
+                "phpunit/phpunit": "~4.0",
+                "squizlabs/php_codesniffer": "~1.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Parse\\": "src/Parse/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Parse Platform License"
+            ],
+            "authors": [
+                {
+                    "name": "Parse",
+                    "homepage": "https://github.com/parse-community/parse-php-sdk/graphs/contributors"
+                }
+            ],
+            "description": "Parse PHP SDK",
+            "homepage": "https://github.com/parse-community/parse-php-sdk",
+            "keywords": [
+                "parse",
+                "sdk"
+            ],
+            "time": "2017-05-15T18:52:48+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

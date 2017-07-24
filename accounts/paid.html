@@ -1,0 +1,198 @@
+ <html>
+ <head>
+   <link rel="stylesheet" href="box.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+     <script src="http://npmcdn.com/parse/dist/parse.js"></script>
+	</head>
+ <body>
+     <div class="container">
+        <div class="page-header">
+        <h1>Paid Statements</h1>
+            <div class="btn-toolbar">
+         <a href="../main.html" class="btn btn-warning pull-right"/>Home</a>
+         </div>
+        </div>
+        <div class="jumbotron">
+    <table id="first-team-results-table" class="table table-hover" border="1xp" style="width:100%">
+        <col width="100">
+        <col width="100">
+        <col width="100">
+        <tbody>
+            <tr>
+                <th><input type="checkbox" class="chkSelectAll" /></th>
+                <th>Group</th>
+                <th>Total</th>
+                <th>Statement Number</th>
+            </tr>
+        </tbody>
+    </table>
+    <script type="text/javascript">
+	  Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com'
+	
+var firstTeamResults = Parse.Object.extend("summary");
+var query = new Parse.Query(firstTeamResults);
+//query.equalTo("group", groupName)
+query.notEqualTo("paid", true)
+query.descending("updateAt");
+query.find({success: function(results){   
+        for (var i = 0; i < results.length; i++) 
+        {
+            var object = results[i];
+               
+            (function($) {
+                $("#first-team-results-table").append("<tr><td>" 
+                	+ "<input type='checkbox' class='chkNumber' value='"+object.id+"'/>"
+                	+ "</td><td>"
+                    + object.get("group")
+                    + "</td><td>" 
+                    + object.get("total")
+                    + "</td><td>"
+                    + object.get("statementNumber")
+                    + "</td></tr>");
+            })(jQuery);
+       }
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);}
+});
+     </script>
+<br><div id="buttonShow"> 
+    <input type="button" class="btnGetAll" value="More"/>
+    </div>
+    <div id="openModal" class="modalDialog">
+	<div>
+		<a href="#close" title="Close" class="close">X</a>
+		<p>Please select an option</p>
+		<input type="radio" name="share" value="paid1">Paid<br>
+        <input type="radio" name="share" value="newMonth">New Monthy<br>
+		<input type="submit" id="go" value="Go"/>
+	</div>
+    <script type="text/javascript"> 
+        var totalUp;
+        var groupUp;
+         Parse.initialize("5uHe6i4aZsLeX0XScouI6lHiPQ2nMeWkzieKMgj7", "wZH4mQq7uK1HpmgWI5lGCXTwDwrvJ8syTC01UGjN");
+	 Parse.serverURL = 'https://parseapi.back4app.com'
+var OBJECT = "";
+      $('.btnGetAll').click(function () {
+        if ($('.chkNumber:checked').length) {
+          var chkId = '';
+          $('.chkNumber:checked').each(function () {
+            chkId += $(this).val() + ",";
+          });
+          chkId = chkId.slice(0, -1);
+          OBJECT = chkId
+          window.location="#openModal";
+        }
+        else {
+          alert('Nothing Selected');
+        }
+      });
+
+      $('.chkSelectAll').click(function () {
+        $('.chkNumber').prop('checked', $(this).is(':checked'));
+      });
+
+      $('.chkNumber').click(function () {
+        if ($('.chkNumber:checked').length == $('.chkNumber').length) {
+          $('.chkSelectAll').prop('checked', true);
+        }
+        else {
+          $('.chkSelectAll').prop('checked', false);
+        }
+      });
+      $('#go').click(function () { 
+      var selectedVal = "";
+var selected = $("input[type='radio'][name='share']:checked");
+if (selected.length > 0) {
+    selectedVal = selected.val();
+}
+if (selectedVal == "paid1") {
+console.log(OBJECT);
+   var firstTeamResults = Parse.Object.extend("summary");
+var query = new Parse.Query(firstTeamResults);
+    query.equalTo("objectId", OBJECT);
+query.first({
+    success: function(results){
+        console.log(results);
+        results.set("paid", true);
+        results.save();
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);}
+}); 
+} else if (selectedVal == "newMonth") {
+     var firstTeamResults = Parse.Object.extend("summary");
+var query = new Parse.Query(firstTeamResults);
+    query.equalTo("objectId", OBJECT);
+query.get(OBJECT, {
+    success: function(results){
+        console.log(results);
+        totalUp = results.get("total");
+        groupUp = results.get("group");
+        console.log(totalUp);
+        console.log(groupUp);
+        upload();
+    },
+    error: function(error) {
+        alert("Error: " + error.code + " " + error.message);}
+}); 
+} });
+          function upload() {
+               var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+var yyyy = today.getFullYear();
+
+if(dd<10) {
+    dd='0'+dd
+} 
+
+if(mm<10) {
+    mm='0'+mm
+} 
+
+today = dd+'/'+mm+'/'+yyyy;
+var signupload = Parse.Object.extend("account");
+var signUpload = new signupload();
+signUpload.set("date", today);
+signUpload.set("trans", "Balance Brought Forward");
+signUpload.set("debits", totalUp);
+signUpload.set("receiptnumber", "N/A");
+signUpload.set("credit", "0.00");
+signUpload.set("group", groupUp); 
+signUpload.set("paid", false);           
+signUpload.save(null, {
+  success: function(signUpload) {
+      deteleObject();
+  },
+   error: function(error) {
+        alert("Error: " + error.code + " " + error.message);
+                }
+});
+              
+          }
+        function deteleObject() {
+            var query = new Parse.Query("summary");
+            query.get(OBJECT, {
+                success: function (delObj) {
+                    // The object was retrieved successfully.
+                    delObj.destroy({});
+                    alert("All Done");
+                    window.location.href = "paid.html";
+                },
+                error: function (object, error) {
+                    // The object was not retrieved successfully.
+                    // error is a Parse.Error with an error code and description.
+                    alert("Error: " + error.code + " " + error.message);
+                }
+            });
+        }
+</script>
+     </div>
+     </div>
+</body>
+</html>

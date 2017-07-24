@@ -1,0 +1,336 @@
+item_id,item_name,item_png,item_price,section,category
+0,Scout Shirt,img/scoutshirt.jpg,17,scouts,uniform
+1,Scout Belt,img/scoutbelt.jpg,13,scouts,uniform
+2,Beavers Polo Shirt,img/beaverShirt.jpg,11.5,beavers,uniform
+3,Beavers Sweatshirt,img/beaverSweatshirt.jpg,13,beavers,uniform
+4,Cubs Polo Shirt,img/cubShirt.jpg,12.5,cub,uniform
+5,Cubs Sweatshirt,img/cubSweatshirt.jpg,13.5,cub,uniform
+6,Explorer S/S Shirt,img/explorerssShirt.jpg,21,explorer,uniform
+7,Explorer L/S Shirt,img/explorerlsShirt.jpg,22,explorer,uniform
+8,Explorer Polo Shirt,img/explorerShirt.jpg,16,explorer,uniform
+9,Adult Polo Shirt,img/adultPoloShirt,16,network/leaders,uniform
+10,Adult Mens S/S Shirt,img/adultShirt,21,network/leaders,uniform
+11,Adult Mens L/S Shirt,img/adultLongShirt.jpg,22,network/leaders,uniform
+12,Youth's Scout Activity Trousers,img/youthBottoms.jpg,16,all sections,uniform
+13,Youth's Scout Unisex Activity Shorts,img/youthShorts.jpg,15.5,all sections,uniform
+14,Beaver - Chief Scout's Bronze Award,,0.71,beavers,badges
+15,Beaver - My Adventure Challenge,,0.71,beavers,badges
+16,Beaver - My Outdoor Challenge,,0.71,beavers,badges
+17,Beaver - My Personal Challenge,,0.71,beavers,badges
+18,Beaver - My Skills Challenge,,0.71,beavers,badges
+19,Beaver - My Teamwork Challenge,,0.71,beavers,badges
+20,Beaver - My World Challenge,,0.71,beavers,badges
+21,Beaver - Moving On Award ,,0.6,beavers,badges
+22,Beaver - Animal Friend,,0.6,beavers,badges
+23,Beaver - Camp Craft,,0.6,beavers,badges
+24,Beaver - Collector,,0.6,beavers,badges
+25,Beaver - Communicator,,0.6,beavers,badges
+26,Beaver - Cook,,0.6,beavers,badges
+27,Beaver - Creative,,0.6,beavers,badges
+28,Beaver - Cyclist,,0.6,beavers,badges
+29,Beaver - Disability Awareness,,0.6,beavers,badges
+30,Beaver - Experiment,,0.6,beavers,badges
+31,Beaver - Explore,,0.6,beavers,badges
+32,Beaver - Faith,,0.6,beavers,badges
+33,Beaver - Gardener,,0.6,beavers,badges
+34,Beaver - Global Issues,,0.6,beavers,badges
+35,Beaver - Health and Fitness,,0.6,beavers,badges
+36,Beaver - Hobbies,,0.6,beavers,badges
+37,Beaver - International,,0.6,beavers,badges
+38,Beaver - Photographer,,0.6,beavers,badges
+39,Beaver - Safety,,0.6,beavers,badges
+40,Beaver - Space,,0.6,beavers,badges
+41,Beaver - Sports,,0.6,beavers,badges
+42,Cub - Chief Scout's Silver Award,,0.71,cub,badges
+43,Cub - Our Adventure Challenge,,0.71,cub,badges
+44,Cub - Our Outdoor Challenge,,0.71,cub,badges
+45,Cub - Personal Challenge,,0.71,cub,badges
+46,Cub - Our Skills Challenge,,0.71,cub,badges
+47,Cub - Team Leader Challenge,,0.71,cub,badges
+48,Cub - Teamwork Challenge,,0.71,cub,badges
+49,Cub - Our World Challenge,,0.71,cub,badges
+50,Cub - Moving On Award,,0.6,cub,badges
+51,Cub - Animal Carer,,0.6,cub,badges
+52,Cub - Artist,,0.6,cub,badges
+53,Cub - Astronomer,,0.6,cub,badges
+54,Cub - Athletics,,0.6,cub,badges
+55,Cub - Athletic Plus,,0.6,cub,badges
+56,Cub - Backwoods Cooking,,0.6,cub,badges
+57,Cub - Book Reader,,0.6,cub,badges
+58,Cub - Chef,,0.6,cub,badges
+59,Cub - Collector,,0.6,cub,badges
+60,Cub - Comminicator,,0.6,cub,badges
+61,Cub - Cyclist,,0.6,cub,badges
+62,Cub - Disability Awareness,,0.6,cub,badges
+63,Cub - DIY,,0.6,cub,badges
+64,Cub - Entertainer,,0.6,cub,badges
+65,Cub - Environmental Conservation,,0.6,cub,badges
+66,Cub - Equestrian,,0.6,cub,badges
+67,Cub - Fire Safety,,0.6,cub,badges
+68,Cub - Global Issues,,0.6,cub,badges
+69,Cub - Hobbies,,0.6,cub,badges
+70,Cub - Home Help,,0.6,cub,badges
+71,Cub - Home Safety,,0.6,cub,badges
+72,Cub - International,,0.6,cub,badges
+73,Cub - Local Knowledge,,0.6,cub,badges
+74,Cub - Martial Arts,,0.6,cub,badges
+75,Cub - My Faith,,0.6,cub,badges
+76,Cub - Naturalist,,0.6,cub,badges
+77,Cub - Personal Safety,,0.6,cub,badges
+78,Cub - Photographer,,0.6,cub,badges
+79,Cub - Physical Recreation,,0.6,cub,badges
+80,Cub - Pioneer,,0.6,cub,badges
+81,Cub - Road Safety,,0.6,cub,badges
+82,Cub - Scientist,,0.6,cub,badges
+83,Cub - Skater,,0.6,cub,badges
+84,Cub - Sports Enthusiast,,0.6,cub,badges
+85,Cub - Water Activities,,0.6,cub,badges
+86,Cub - World Faith,,0.6,cub,badges
+87,Scout - Chief Scout's Gold Award,,0.71,scouts,badges
+88,Scout - Adventure Challenge Award,,0.71,scouts,badges
+89,Scout - Creative Challenge Award,,0.71,scouts,badges
+90,Scout - Expedition Challenge Award,,0.71,scouts,badges
+91,Scout - Outdoors Challenge Award,,0.71,scouts,badges
+92,Scout - Personal Challenge Award,,0.71,scouts,badges
+93,Scout - Skills Challenge Award,,0.71,scouts,badges
+94,Scout - Team Leader Challenge Award,,0.71,scouts,badges
+95,Scout - Teamwork Challenge Award,,0.71,scouts,badges
+96,Scout - World Challenge Award,,0.71,scouts,badges
+97,Scout - Moving On Award,,0.6,scouts,badges
+98,Scout - Activity Centre Service,,0.6,scouts,badges
+99,Scout - Air Researcher,,0.6,scouts,badges
+100,Scout - Air & Sea Navigation,,0.6,scouts,badges
+101,Scout - Air Spotter,,0.6,scouts,badges
+102,Scout - Angler,,0.6,scouts,badges
+103,Scout - Artist,,0.6,scouts,badges
+104,Scout - Astronautics,,0.6,scouts,badges
+105,Scout - Astonomer,,0.6,scouts,badges
+106,Scout - Athletics,,0.6,scouts,badges
+107,Scout - Athletics Plus,,0.6,scouts,badges
+108,Scout - Camper,,0.6,scouts,badges
+109,Scout - Caver,,0.6,scouts,badges
+110,Scout - Chef,,0.6,scouts,badges
+111,Scout - Circus Skills,,0.6,scouts,badges
+112,Scout - Climber,,0.6,scouts,badges
+113,Scout - Communicator,,0.6,scouts,badges
+114,Scout - Craft,,0.6,scouts,badges
+115,Scout - Cyclist,,0.6,scouts,badges
+116,Scout - DIY,,0.6,scouts,badges
+117,Scout - Dragon Boating,,0.6,scouts,badges
+118,Scout - Electronics,,0.6,scouts,badges
+119,Scout - Entertainer,,0.6,scouts,badges
+120,Scout - Environmental Conservation,,0.6,scouts,badges
+121,Scout - Equestrian,,0.6,scouts,badges
+122,Scout - Fire Safety,,0.6,scouts,badges
+123,Scout - Forester,,0.6,scouts,badges
+124,Scout - Fundraising,,0.6,scouts,badges
+125,Scout - Geocaching,,0.6,scouts,badges
+126,Scout - Global Issues,,0.6,scouts,badges
+127,Scout - Hill Walker,,0.6,scouts,badges
+128,Scout - Hobbies,,0.6,scouts,badges
+129,Scout - International,,0.6,scouts,badges
+130,Scout - Librarian,,0.6,scouts,badges
+131,Scout - Lifesaver,,0.6,scouts,badges
+132,Scout - Local Knowledge,,0.6,scouts,badges
+133,Scout - Martial Arts,,0.6,scouts,badges
+134,Scout - Master at Arms,,0.6,scouts,badges
+135,Scout - Mechanic,,0.6,scouts,badges
+136,Scout - Media Relations and Marketing,,0.6,scouts,badges
+137,Scout - Meteorologist,,0.6,scouts,badges
+138,Scout - Model Maker,,0.6,scouts,badges
+139,Scout - My Faith,,0.6,scouts,badges
+140,Scout - Naturalist,,0.6,scouts,badges
+141,Scout - Orienteer,,0.6,scouts,badges
+142,Scout - Parascending,,0.6,scouts,badges
+143,Scout - Photographer,,0.6,scouts,badges
+144,Scout - Physical Recreation,,0.6,scouts,badges
+145,Scout - Pioneer,,0.6,scouts,badges
+146,Scout - Plus,,0.6,scouts,badges
+147,Scout - Power Coxswain,,0.6,scouts,badges
+148,Scout - Pulling,,0.6,scouts,badges
+149,Scout - Quartermaster,,0.6,scouts,badges
+150,Scout - Smallholder,,0.6,scouts,badges
+151,Scout - Snowsports,,0.6,scouts,badges
+152,Scout - Sports Enthusiast,,0.6,scouts,badges
+153,Scout - Street Sports,,0.6,scouts,badges
+154,Scout - Survival Skills,,0.6,scouts,badges
+155,Scout - Water Activities,,0.6,scouts,badges
+156,Scout - World Faith,,0.6,scouts,badges
+157,Scout - Writer,,0.6,scouts,badges
+158,Patrol Badge - Badger,,0.7,scouts,badges
+159,Patrol Badge - Beaver,,0.7,scouts,badges
+160,Patrol Badge - Buffalo,,0.7,scouts,badges
+161,Patrol Badge - Bull,,0.7,scouts,badges
+162,Patrol Badge - Bulldog,,0.7,scouts,badges
+163,Patrol Badge - Cobra,,0.7,scouts,badges
+164,Patrol Badge - Curlew,,0.7,scouts,badges
+165,Patrol Badge - Eagle,,0.7,scouts,badges
+166,Patrol Badge - Falcon,,0.7,scouts,badges
+167,Patrol Badge - Fox,,0.7,scouts,badges
+168,Patrol Badge - Gannet,,0.7,scouts,badges
+169,Patrol Badge - Hawk,,0.7,scouts,badges
+170,Patrol Badge - Kestrel,,0.7,scouts,badges
+171,Patrol Badge - Kingfisher,,0.7,scouts,badges
+172,Patrol Badge - Lion,,0.7,scouts,badges
+173,Patrol Badge - Merlin,,0.7,scouts,badges
+174,Patrol Badge - Otter,,0.7,scouts,badges
+175,Patrol Badge - Owl,,0.7,scouts,badges
+176,Patrol Badge - Panther,,0.7,scouts,badges
+177,Patrol Badge - Peewit,,0.7,scouts,badges
+178,Patrol Badge - Raven,,0.7,scouts,badges
+179,Patrol Badge - Seagull,,0.7,scouts,badges
+180,Patrol Badge - Seal,,0.7,scouts,badges
+181,Patrol Badge - Stag,,0.7,scouts,badges
+182,Patrol Badge - Swift,,0.7,scouts,badges
+183,Patrol Badge - Tiger,,0.7,scouts,badges
+184,Patrol Badge - Wolf,,0.7,scouts,badges
+185,Patrol Badge - Woodpecker,,0.7,scouts,badges
+186,Patrol Badge - Woodpigeon,,0.7,scouts,badges
+187,Patrol Badge - Yellow,,0.7,scouts,badges
+188,Patrol Badge - Red,,0.7,scouts,badges
+189,Patrol Badge - Green,,0.7,scouts,badges
+190,Patrol Badge - Blue,,0.7,scouts,badges
+191,Patrol Badge - Orange,,0.7,scouts,badges
+192,Patrol Badge - White,,0.7,scouts,badges
+193,Explorer - Chief Scout's Platinum Award,,0.71,explorer,badges
+194,Explorer - Chief Scout's Diamond Award,,0.71,explorer,badges
+195,Explorer - Moving On Award,,0.6,explorer,badges
+196,Explorer - Activity Centre Service,,0.6,explorer,badges
+197,Explorer - Athlete,,0.6,explorer,badges
+198,Explorer - Camper,,0.6,explorer,badges
+199,Explorer - Caving,,0.6,explorer,badges
+200,Explorer - Chef,,0.6,explorer,badges
+201,Explorer - Climbing,,0.6,explorer,badges
+202,Explorer - Creative Arts,,0.6,explorer,badges
+203,Explorer - Fundraising,,0.6,explorer,badges
+204,Explorer - Global Issues,,0.6,explorer,badges
+205,Explorer - Hill Walking,,0.6,explorer,badges
+206,Explorer - International,,0.6,explorer,badges
+207,Explorer - Leadership,,0.6,explorer,badges
+208,Explorer - Lifesaver,,0.6,explorer,badges
+209,Explorer - Media Relations & Marketing,,0.6,explorer,badges
+210,Explorer - Motor Sports,,0.6,explorer,badges
+211,Explorer - Mountain Biking,,0.6,explorer,badges
+212,Explorer - Naturalist,,0.6,explorer,badges
+213,Explorer - Performing Arts,,0.6,explorer,badges
+214,Explorer - Physical Recreation,,0.6,explorer,badges
+215,Explorer - Pioneer,,0.6,explorer,badges
+216,Explorer - Racquet Sports,,0.6,explorer,badges
+217,Explorer - Science & Technology,,0.6,explorer,badges
+218,Explorer - Skiing,,0.6,explorer,badges
+219,Explorer - Snowboarding,,0.6,explorer,badges
+220,Explorer - Street Sports,,0.6,explorer,badges
+221,Explorer - Survival Skills,,0.6,explorer,badges
+222,Explorer - Water Activities,,0.6,explorer,badges
+223,Air Activities Stage 1,,0.6,all sections,badges
+224,Air Activities Stage 2,,0.6,all sections,badges
+225,Air Activities Stage 3,,0.6,all sections,badges
+226,Air Activities Stage 4,,0.6,all sections,badges
+227,Air Activities Stage 5,,0.6,all sections,badges
+228,Air Activities Stage 6,,0.6,all sections,badges
+229,Community Impact Stage 1,,0.6,all sections,badges
+230,Community Impact Stage 2,,0.6,all sections,badges
+231,Community Impact Stage 3,,0.6,all sections,badges
+232,Community Impact Stage 4,,0.6,all sections,badges
+233,Digital Citizen Stage 1,,0.6,all sections,badges
+234,Digital Citizen Stage 2,,0.6,all sections,badges
+235,Digital Citizen Stage 3,,0.6,all sections,badges
+236,Digital Citizen Stage 4,,0.6,all sections,badges
+237,Digital Maker Stage 1,,0.6,all sections,badges
+238,Digital Maker Stage 2,,0.6,all sections,badges
+239,Digital Maker Stage 3,,0.6,all sections,badges
+240,Digital Maker Stage 4,,0.6,all sections,badges
+241,Digital Maker Stage 5,,0.6,all sections,badges
+242,Emergency Aid Stage 1,,0.6,all sections,badges
+243,Emergency Aid Stage 2,,0.6,all sections,badges
+244,Emergency Aid Stage 3,,0.6,all sections,badges
+245,Emergency Aid Stage 4,,0.6,all sections,badges
+246,Emergency Aid Stage 5,,0.6,all sections,badges
+247,Hikes Away Badge 1  ,,0.6,all sections,badges
+248,Hikes Away Badge 2 ,,0.6,all sections,badges
+249,Hikes Away Badge 5   ,,0.6,all sections,badges
+250,Hikes Away Badge 10 ,,0.6,all sections,badges
+251,Hikes Away Badge 15,,0.6,all sections,badges
+252,Hikes Away Badge 20 ,,0.6,all sections,badges
+253,Hikes Away Badge 35 ,,0.6,all sections,badges
+254,Hikes Away Badge 50 ,,0.6,all sections,badges
+255,Musician Stage 1,,0.6,all sections,badges
+256,Musician Stage 2,,0.6,all sections,badges
+257,Musician Stage 3,,0.6,all sections,badges
+258,Musician Stage 4,,0.6,all sections,badges
+259,Musician Stage 5,,0.6,all sections,badges
+260,Nautical Skills Stage 1,,0.6,all sections,badges
+261,Nautical Skills Stage 2,,0.6,all sections,badges
+262,Nautical Skills Stage 3,,0.6,all sections,badges
+263,Nautical Skills Stage 4,,0.6,all sections,badges
+264,Nautical Skills Stage 5,,0.6,all sections,badges
+265,Nautical Skills Stage 6,,0.6,all sections,badges
+266,Navigator Stage 1,,0.6,all sections,badges
+267,Navigator Stage 2,,0.6,all sections,badges
+268,Navigator Stage 3,,0.6,all sections,badges
+269,Navigator Stage 4,,0.6,all sections,badges
+270,Navigator Stage 5,,0.6,all sections,badges
+271,Nights Away 1 Night,,0.6,all sections,badges
+272,Nights Away 2 Nights,,0.6,all sections,badges
+273,Nights Away 3 Nights,,0.6,all sections,badges
+274,Nights Away 4 Nights,,0.6,all sections,badges
+275,Nights Away 5 Nights,,0.6,all sections,badges
+276,Nights Away 10 Nights,,0.6,all sections,badges
+277,Nights Away 15 Nights,,0.6,all sections,badges
+278,Nights Away 20 Nights,,0.6,all sections,badges
+279,Nights Away 35 Nights,,0.6,all sections,badges
+280,Nights Away 50 Nights,,0.6,all sections,badges
+281,Nights Away 75 Nights,,0.6,all sections,badges
+282,Nights Away 100 Nights,,0.6,all sections,badges
+283,Nights Away 125 Nights,,0.6,all sections,badges
+284,Nights Away 150 Nights,,0.6,all sections,badges
+285,Nights Away 175 Nights,,0.6,all sections,badges
+286,Nights Away 200 Nights,,0.6,all sections,badges
+287,Paddlesports Stage 1,,0.6,all sections,badges
+288,Paddlesports Stage 2,,0.6,all sections,badges
+289,Paddlesports Stage 3,,0.6,all sections,badges
+290,Paddlesports Stage 4,,0.6,all sections,badges
+291,Sailing Stage 1,,0.6,all sections,badges
+292,Sailing Stage 2,,0.6,all sections,badges
+293,Sailing Stage 3,,0.6,all sections,badges
+294,Sailing Stage 4,,0.6,all sections,badges
+295,Swimmer Stage 1,,0.6,all sections,badges
+296,Swimmer Stage 2,,0.6,all sections,badges
+297,Swimmer Stage 3,,0.6,all sections,badges
+298,Swimmer Stage 4,,0.6,all sections,badges
+299,Swimmer Stage 5,,0.6,all sections,badges
+300,Time on Water Stage 1,,0.6,all sections,badges
+301,Time on Water Stage 2,,0.6,all sections,badges
+302,Time on Water Stage 5,,0.6,all sections,badges
+303,Time on Water Stage 10,,0.6,all sections,badges
+304,Time on Water Stage 15,,0.6,all sections,badges
+305,Time on Water Stage 20,,0.6,all sections,badges
+306,Time on Water Stage 35,,0.6,all sections,badges
+307,Time on Water Stage 50,,0.6,all sections,badges
+308,APL / Seconder Stripe,,0.6,all sections,badges
+309,PL / Sixer Stripe,,0.6,all sections,badges
+310,SPL Stripe,,0.6,all sections,badges
+311,World Badge ,,0.71,all sections,badges
+312,South West Cheshire District Badge ,,0.6,all sections,badges
+313,Mid Cheshire District Badge ,,0.6,all sections,badges
+314,D of E Award - Bronze,,0.82,all sections,badges
+315,D of E Award - Silver,,0.82,all sections,badges
+316,D of E Award - Gold,,0.82,all sections,badges
+317,Scout Active Support,,1.16,all sections,badges
+318,First Aider,,0.82,all sections,badges
+319,Instructor's Badge,,0.6,all sections,badges
+320,Activity Plus (All Sections),,0.6,all sections,badges
+321,Young Leader's Scheme Module A,,0.71,all sections,badges
+322,Young Leader Mission,,0.6,all sections,badges
+323,Participation Badge 1,,0.47,all sections,badges
+324,Participation Badge 2,,0.47,all sections,badges
+325,Participation Badge 3,,0.47,all sections,badges
+326,Participation Badge 4,,0.47,all sections,badges
+327,Participation Badge 5,,0.47,all sections,badges
+328,Participation Badge 6,,0.47,all sections,badges
+329,Participation Badge 7,,0.47,all sections,badges
+330,Participation Badge 8,,0.47,all sections,badges
+331,Participation Badge 9,,0.47,all sections,badges
+332,Participation Badge 10,,0.47,all sections,badges
+333,Participation Badge 11,,0.47,all sections,badges
+334,Participation Badge 12,,0.47,all sections,badges
