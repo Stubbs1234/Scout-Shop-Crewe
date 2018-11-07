@@ -1,5 +1,6 @@
 {
     "require": {
-        "parse/php-sdk": "^1.2"
+        "phpoffice/phpspreadsheet": "^1.2",
+        "phpoffice/phpword": "^0.14.0"
     }
 }

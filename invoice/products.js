@@ -1,1 +1,0 @@
-var products = ["Badges", "Uniform", "Novelties", "Publications", "Hardware"];
